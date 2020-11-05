@@ -1,4 +1,4 @@
-# Python-Covid-19
+# Covid-19 database and GeoJSON spread map
 Thanks to Covid-19 public API, a Covid-19 database and GeoJSON spread map, made in Python using PySimpleGUI, updated every day. 
 
 ## Notes
