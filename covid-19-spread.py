@@ -146,7 +146,7 @@ class COVID_GUI:
 
         data = json_data['Countries']
 
-        with open(os.getcwd() + '/Covid-19-World/countries.json', 'w') as h:
+        with open(os.getcwd() + '/countries.json', 'w') as h:
             json.dump(data, h, indent=4)
 
         df = pd.read_json(os.getcwd() + '/Covid-19-World/countries.json')
@@ -161,7 +161,7 @@ class COVID_GUI:
         df['Date'] = pd.to_datetime(df['Date'], format="%Y-%m-%d")
         df['Date'] = df['Date'].dt.strftime('%Y-%m-%d')
 
-        with open(os.getcwd() + '/Covid-19-World/custom.geojson') as f:
+        with open(os.getcwd() + '/custom.geojson') as f:
             d = json.load(f)
 
         fig = px.choropleth(df, geojson=d, locations='Country',
