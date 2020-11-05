@@ -149,7 +149,7 @@ class COVID_GUI:
         with open(os.getcwd() + '/countries.json', 'w') as h:
             json.dump(data, h, indent=4)
 
-        df = pd.read_json(os.getcwd() + '/Covid-19-World/countries.json')
+        df = pd.read_json(os.getcwd() + '/countries.json')
         df.to_csv()
 
         df.head()
